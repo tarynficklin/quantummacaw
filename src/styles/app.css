@@ -1,0 +1,56 @@
+/* React mounts into #root, with a .page wrapper per route. Give both the full height that
+   body had on the PHP site, so .wrapper's min-height: 100% still fills the window. */
+#root,
+.page {
+  height: 100%;
+}
+
+/* Not-found page: the old 404.html was a standalone page without the site's styles. These
+   rules reproduce it on top of common.css (which sets dark backgrounds and white text). */
+.page-notfound {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  text-align: center;
+  background: #fff;
+  font-family: sans-serif;
+}
+
+.page-notfound > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-notfound h1,
+.page-notfound p {
+  margin: 0 auto;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-indent: 0;
+  font-family: sans-serif;
+}
+
+.page-notfound h1 {
+  color: #555;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.page-notfound p {
+  width: 280px;
+  color: #888;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 280px) {
+  .page-notfound p {
+    width: 95%;
+  }
+
+  .page-notfound h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.3em;
+  }
+}

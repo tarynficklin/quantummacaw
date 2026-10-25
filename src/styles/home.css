@@ -1,0 +1,130 @@
+:where(.page-home) .logo {
+  width: 100%;
+  display: block;
+  padding: 100px 0px;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/img/background.jpg");}
+
+:where(.page-home) .gallery {
+  width: 100%;
+  color: #000000;
+  display: block;
+  padding: 75px 0px;
+  text-align: center;}
+
+:where(.page-home) .gallery img {
+  margin: 5%;
+  width: 22%;
+  height: 22%;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+  box-shadow: 0 5px 25px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 5px 25px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 5px 25px rgba(0,0,0,.5);}
+
+:where(.page-home) .videos {
+  height: calc(20vw + 20vh);
+  background: url("/img/felt-pattern.png") #222222 repeat;
+
+  box-shadow: inset 0 0 250px rgba(0,0,0,.5);
+  -moz-box-shadow: inset 0 0 250px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 250px rgba(0,0,0,.5);}
+
+:where(.page-home) .videos article {
+  width: 45%;
+  float: left;
+  padding: 1.5%;
+  display: inline-block;}
+
+:where(.page-home) .live-video {
+  width: 50%;
+  height: 100%;
+  border: 0px;
+  float: right;}
+
+:where(.page-home) .display {
+  width: 100%;
+  display: block;
+  padding: 15% 0px;
+
+  text-align: center;
+  text-transform: lowercase;
+  text-shadow: 0 5px 10px rgba(0,0,0,.25);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/img/owl.jpg");
+
+  box-shadow: inset 0 15px 50px rgba(0,0,0,.5);
+	-moz-box-shadow: inset 0 15px 50px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 0 15px 50px rgba(0,0,0,.5);}
+
+:where(.page-home) .display h3 {
+  padding: 0 5%;;
+  font-size: calc(4vw + 4vh);
+  font-weight: 500;
+  font-family: "Modeka", sans-serif;
+  letter-spacing: 30px;}
+
+@media screen and (max-width: 1024px) {
+  :where(.page-home) p {font-size: 20px; display: block;}
+
+  :where(.page-home) .gallery {
+    width: 100%;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+  :where(.page-home) .gallery img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0);
+    -moz-box-shadow: 0 5px 25px rgba(0,0,0,0);
+    -webkit-box-shadow: 0 5px 25px rgba(0,0,0,0);}
+
+  :where(.page-home) .gallery h2 {display: none;}
+
+  :where(.page-home) .videos {height: auto;}
+
+  :where(.page-home) .videos article {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50vh;
+    float: none;
+    display: block;
+    position: static;}
+
+  :where(.page-home) .live-video {
+    width: 100%;
+    height: calc(50vw + 20vh);
+    border: 0px;
+    float: none;
+    display: block;
+    position: static;}
+
+    :where(.page-home) .display h3 {font-size: 50px;}
+}
+
+@media screen and (max-width: 700px) {
+  :where(.page-home) p {font-size: 20px;}
+  :where(.page-home) .logo img {width: 50%; height: 50%;}
+  :where(.page-home) .display h3 {font-size: 35px;}
+}

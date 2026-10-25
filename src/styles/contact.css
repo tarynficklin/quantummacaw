@@ -1,0 +1,95 @@
+/* based on dbox.us, code source for rainbow background:
+https://gist.github.com/AllThingsSmitty/17f8479cd7e74ee2f8f8 */
+
+:where(.page-contact) .contact {
+  height: 100vh;
+  padding: 0 15vw;
+  text-align: center;
+  box-sizing: content-box;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+
+  background: linear-gradient(238deg, #fd8800, #fd008f, #9700fd, #003dfd, #05c7e6, #4bd58d);
+  background-size: 1200% 1200%;
+  -webkit-animation: rainbow 60s ease infinite;
+  animation: rainbow 60s ease infinite;}
+
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+:where(.page-contact) .contact-form {width: 100%;}
+
+:where(.page-contact) .input {
+  color: #000;
+  width: 100%;
+  margin: 5% 0 0 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+  resize: none;
+  padding: 10px;
+  transition: 500ms;
+
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Dosis", sans-serif;
+
+  letter-spacing: 6px;
+  line-height: calc(1.4vh + 1.4vw);
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;}
+
+:where(.page-contact) .input:focus {background: rgba(255, 255, 255, 0.95); transition: 500ms;}
+
+:where(.page-contact) textarea::-webkit-scrollbar {
+  width: 14px;
+  height: 18px;}
+
+:where(.page-contact) textarea::-webkit-scrollbar-thumb {
+  height: 6px;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  -webkit-border-radius: 7px;
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);}
+
+@media screen and (max-width: 1024px) {
+  :where(.page-contact) .contact {height: 90vh;}
+  :where(.page-contact) .input {font-size: 20px;}
+}
+
+@media screen and (max-width: 700px) {
+  :where(.page-contact) .contact {padding: 0; margin: 0; width: 100%; box-sizing: border-box;}
+  :where(.page-contact) .contact-form {padding: 0; margin: 0; width: 100%; box-sizing: border-box;}
+
+  :where(.page-contact) .input {
+    margin: 0;
+    width: 100%;
+    height: 15vh;
+    font-size: 15px;
+    box-sizing: border-box;
+
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+  }
+}

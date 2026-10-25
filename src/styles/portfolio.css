@@ -1,0 +1,44 @@
+:where(.page-portfolio) .player {
+  width: 100%;
+  height: 50vh;
+  display: block;
+  text-align: center;
+  background: url("/portfolio/img/felt-pattern.png") #222222 repeat;
+
+  box-shadow: inset 0 0 250px rgba(0,0,0,.5);
+  -moz-box-shadow: inset 0 0 250px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 250px rgba(0,0,0,.5);}
+
+/* Was .video video, which matched through the "video" class Modernizr added to <html>. */
+:where(.page-portfolio) .player video {height: inherit;}
+:where(.page-portfolio) .video-selector {box-sizing: border-box; width: 100%; padding: 5%; text-align: center; overflow-x: auto;}
+:where(.page-portfolio) .thumbnail {
+  margin: 25px;
+  opacity: 0.75;
+  transition:.3s;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;}
+
+  :where(.page-portfolio) .thumbnail:hover {opacity: 1; transition:.3s;}
+
+@media screen and (max-width: 1024px) {
+    :where(.page-portfolio) .player {height: 40vw;}
+    :where(.page-portfolio) .video-selector {margin: 0; padding: 0; font-size: 0;}
+    :where(.page-portfolio) .thumbnail {
+      width: 50%;
+      height: 50%;
+      max-width: none;
+      max-height: none;
+      display: inline;
+      margin: 0;
+      padding: 0;
+
+      border-radius: 0px;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;}
+  }
