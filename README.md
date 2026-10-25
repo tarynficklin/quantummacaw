@@ -6,10 +6,12 @@ The Quantum Macaw cinematography site, rebuilt from PHP includes into a small Re
 
 ```bash
 bun install
-bun run dev       # http://localhost:3109
+bun run dev       # http://localhost:<PORT> (default 3109)
 bun run build     # static site in dist/
-bun run preview   # serve dist/ on http://localhost:3109
+bun run preview   # serve dist/ on the same PORT
 ```
+
+The dev server and the preview use `PORT` from `.env` (default 3109, the app's fixed port so the legacy apps can run side by side). Bun loads `.env` and git ignores it.
 
 Installs wait a week before taking new package releases (`minimumReleaseAge` in `bunfig.toml`).
 
